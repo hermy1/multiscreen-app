@@ -223,9 +223,6 @@ class BMIWindow(Frame):
             weight = float(self.weight_entry.get())
 
             height = float(self.height_entry.get())
-            '''bmi = BMI(weight, height)
-            self.value_label.config(text=f'Value: {bmi.value:.2f}')
-            self.category_label.config(text=f'Category: {bmi.category}')'''
             value = BMI.get_bmi_value(weight,height)
             category = BMI.get_bmi_category(value)
             self.value_label.config(text=f'Value: {value:.2f}')
